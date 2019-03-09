@@ -153,6 +153,7 @@ nav h1 a {
   flex-direction: column;
   align-items: center;
 }
+
 #restaurants-list li {
   background-color: #fff;
   border-bottom: 2px solid #ccc;
@@ -164,6 +165,7 @@ nav h1 a {
   display: flex;
   flex-direction: column;
 }
+
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
@@ -171,7 +173,8 @@ nav h1 a {
   max-width: 100%;
   min-width: 100%;
 }
-#restaurants-list li h1 {
+
+#restaurants-list li h2 {
   color: #f18200;
   font-family: Arial,sans-serif;
   font-size: 15pt;
@@ -271,7 +274,7 @@ nav h1 a {
 #reviews-container {
   padding: 30px 40px 80px;
 }
-#reviews-container h2 {
+#reviews-container h3 {
   color: #f58500;
   font-size: 24pt;
   font-weight: 300;
