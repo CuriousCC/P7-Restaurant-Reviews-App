@@ -79,13 +79,16 @@ nav h1 a {
   text-transform: uppercase;
 }
 
+/* ====================== Breadcrumb ====================== */
+
+
 #breadcrumb {
-  padding: 10px 40px 16px;
+  padding: 10px 40px 10px;
   list-style: none;
-  background-color: #eee;
   font-size: 17px;
   margin: 0;
-  width: calc(50% - 80px);
+  width: 100%;
+  text-align: left;
 }
 
 /* Display list items side by side */
@@ -241,6 +244,22 @@ nav h1 a {
   top: 0;
   width: 100%;
   z-index: 1000;
+  text-align: center;
+}
+.inside header h1 {
+  background-color: #252831;
+  margin: auto;
+  padding: 20px;
+}
+.inside header h1 a {
+  font-size: 1em;
+  font-weight: 200;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.inside header nav{
+  background-color: #eee;
 }
 
 .inside #map-container {
