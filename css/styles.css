@@ -176,6 +176,7 @@ nav h1 a {
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 #restaurants-list li {
@@ -264,15 +265,17 @@ nav h1 a {
   background-color: #eee;
 }
 
-.inside main {
+.inside .maincontent-2 {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
 .inside .map-container {
   background: blue none repeat scroll 0 0;
-  height:400px;
+  /* height:400px; */
   z-index: 99;
   width: 85%;
   order: 3;
@@ -292,7 +295,7 @@ nav h1 a {
   padding-top: 20px;
 }
 
-.restaurant-ddetails{
+.restaurant-details{
   width: 100%;
   margin-bottom: 20px;  
 
@@ -426,32 +429,87 @@ nav h1 a {
 
 /* ====================== Media Queries ====================== */
 
-@media only screen and (max-width: 768px) {
-  #restaurants-list {
-    align-items: center;
-  }
-}
-
 @media only screen and (min-width: 420px) and (max-width: 600px) {
   #restaurants-list li {
     width: 350px;
   }
+
+  .opening-hours {
+    width: 300px;
+    margin: 0 auto;
+}
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   #restaurants-list li {
     width: 400px;
   }
+
+  .maincontent-2 {
+    width: 500px !important;
+    margin: 0 auto;
+    justify-content: center;
+  }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   #restaurants-list {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: stretch;
   }
+
   #restaurants-list li {
     width: 300px;
     justify-content: space-between;
+  }
+
+  .inside.maincontent-2 {
+    justify-content: baseline;
+    width: 100%;
+  }
+
+  .inside #map-container{
+    width: 48%;
+    order: 2;
+    margin-top: 144px;
+    margin-bottom: 0;
+    min-height: 100%;
+    /* height: auto; */
+  }
+
+  .inside #map {
+    height: 100%;
+  }
+
+  #restaurant-container {
+    width: 40%;
+    order: 1;
+  }
+  .restaurant-details, .opening-hours {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #restaurant-hours {
+    display: table;
+    margin: 0 auto;
+  }
+
+  .inside #reviews-container {
+    order: 3;
+  }
+
+  #reviews-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #reviews-list li {
+    width: 400px;
+    margin: 20px;
   }
 }
