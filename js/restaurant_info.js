@@ -130,6 +130,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h3');
   title.innerHTML = 'Reviews';
+  title.tabIndex='0';
   container.appendChild(title);
 
   if (!reviews) {
@@ -150,6 +151,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  li.tabIndex ='0';
 
   const heading = document.createElement('div');
   heading.className = 'review-heading';
