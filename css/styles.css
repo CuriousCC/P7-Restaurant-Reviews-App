@@ -51,8 +51,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 
 #footer {
-  background-color: black;
-  color: #aaa;
+  background-color: #980505;
+  color: white;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
@@ -65,7 +65,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 nav {
   width: 100%;
   height: 100%;
-  background-color: #252831;
+  /* background-color: #252831; */
+  background-color: #980505;
   text-align: center;
 }
 
@@ -147,6 +148,7 @@ nav h1 a {
   text-align: center;
   font-size: 1.4em;
   width: 100%;
+  color: #980505;
 }
 
 .filter select {
@@ -244,7 +246,7 @@ nav h1 a {
   text-align: center;
 }
 .inside header h1 {
-  background-color: #252831;
+  background-color: #980505;
   margin: auto;
   padding: 15px;
 }
