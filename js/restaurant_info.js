@@ -90,9 +90,10 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = DBHelper.altTxtForRestaurantImage(restaurant);
-  
+
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
+  cuisine.setAttribute('aria-label', 'Cuisine type');
 
   // fill operating hours
   if (restaurant.operating_hours) {
@@ -167,6 +168,7 @@ createReviewHTML = (review) => {
   const rating = document.createElement('p');
   rating.className = 'review-rating';
   rating.innerHTML = `Rating: ${review.rating}`;
+  rating.setAttribute('aria-label', `Commenter's rating: ${review.rating}`);
   li.appendChild(rating);
 
   const comments = document.createElement('p');
