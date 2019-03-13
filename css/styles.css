@@ -134,7 +134,8 @@ nav h1 a {
 .filter {
   background-color: #027fd3;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px 0;
   align-items: center;
   justify-content: center;
 }
@@ -146,16 +147,10 @@ nav h1 a {
   margin: 0 20px;
   text-align: center;
   font-size: 1.4em;
+  width: 100%;
 }
 
-.filter-options {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.filter-options select {
+.filter select {
   background-color: white;
   border: 1px solid #fff;
   font-family: Arial, sans-serif;
