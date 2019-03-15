@@ -23,7 +23,9 @@ let filesToCache = [
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(cacheVersion)
-            .then((cache) => cache.addAll(filesToCache))
+            .then((cache) => {
+            return cache.addAll(filesToCache)
+        })
     );
 });
 
@@ -31,8 +33,12 @@ self.addEventListener('activate', (event) => {
     event.waitUntil(
         caches.keys()
             .then((cacheNames) => {
-                return Promise.all(cacheNames.filter((cacheName) => cacheName.startsWith('cache-') &&
-                    cacheName != cacheVersion).map((cacheName) => caches.delete(cacheName)));
+                return Promise.all(
+                    cacheNames.filter((cacheName) => 
+                    cacheName.startsWith('cache-') &&
+                    cacheName != cacheVersion)
+                    .map((cacheName) => 
+                    caches.delete(cacheName)));
             })
     );
 });
