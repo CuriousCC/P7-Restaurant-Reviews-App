@@ -96,6 +96,7 @@ nav h1 a {
 
 #breadcrumb li {
   display: inline;
+  font-size: 12pt;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
@@ -467,6 +468,10 @@ nav h1 a {
     justify-content: space-between;
   }
 
+  #restaurant-hours td, #restaurant-address {
+    font-size: 13pt;
+  }
+  
   .inside #map-container {
     width: 50%;
     order: 2;
