@@ -1,7 +1,6 @@
 let cacheVersion = 'cache-v1';
 let filesToCache = [
     './',
-    './P7-Restaurant-Reviews-App',
     '.index.html',
     '.restaurant.html',
     './css/styles.css',
