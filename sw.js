@@ -13,7 +13,7 @@ self.addEventListener('install', (event) => {
                     '/js/restaurant_info.js',
                     '/js/dbhelper.js',
                     '/data/restaurants.json',
-                    '/P7-Restaurant-Reviews-App/img/1.jpg',
+                    '/img/1.jpg',
                     '/img/2.jpg',
                     '/img/3.jpg',
                     '/img/4.jpg',
