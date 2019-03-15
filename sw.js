@@ -1,5 +1,5 @@
 let cacheVersion = 'cache-v1';
-let filesToCache = [
+const filesToCache = [
     './',
     '.index.html',
     '.restaurant.html',
@@ -24,7 +24,7 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(cacheVersion)
             .then((cache) => {
-            return cache.addAll(filesToCache)
+            return cache.addAll(filesToCache);
         })
     );
 });
@@ -34,22 +34,28 @@ self.addEventListener('activate', (event) => {
         caches.keys()
             .then((cacheNames) => {
                 return Promise.all(
-                    cacheNames.filter((cacheName) => 
-                    cacheName.startsWith('cache-') &&
-                    cacheName != cacheVersion)
-                    .map((cacheName) => 
-                    caches.delete(cacheName)));
+                    cacheNames.filter( (cacheName) =>{
+                        return cacheName.startsWith('cache-v') &&
+                            cacheName != cacheVersion;
+                    }).map((cacheName) =>{
+                        return caches.delete(cacheName);
+                    })
+                );
             })
     );
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', (event) => { 
     event.respondWith(
         caches.open(cacheVersion)
-            .then((cache) => cache.match(event.request)
-                .then((response) => response || fetch(event.request)
-                    .then((response) => {
-                        cache.put(event.request, response.clone());
-                        return response;
-                    }))));
-});
+        .then((cache) => { 
+            return cache.match(event.request)
+            .then((response) => { 
+                return response || fetch(event.request)
+                .then((response) => { 
+                    cache.put(event.request, response.clone()); 
+                    return response; 
+                }); 
+            }); 
+        })); 
+    });
