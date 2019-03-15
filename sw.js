@@ -1,23 +1,24 @@
 let cacheVersion = 'cache-v1';
 let filesToCache = [
     './',
-    '.index.html',
-    '.restaurant.html',
-    './css/styles.css',
-    './js/main.js',
-    './js/restaurant_info.js',
-    './js/dbhelper.js',
-    './data/restaurants.json',
-    './img/1.jpg',
-    './img/2.jpg',
-    './img/3.jpg',
-    './img/4.jpg',
-    './img/5.jpg',
-    './img/6.jpg',
-    './img/7.jpg',
-    './img/8.jpg',
-    './img/9.jpg',
-    './img/10.jpg'
+    './P7-Restaurant-Reviews-App/',
+    './P7-Restaurant-Reviews-Appindex.html',
+    './P7-Restaurant-Reviews-Apprestaurant.html',
+    './P7-Restaurant-Reviews-App/css/styles.css',
+    './P7-Restaurant-Reviews-App/js/main.js',
+    './P7-Restaurant-Reviews-App/js/restaurant_info.js',
+    './P7-Restaurant-Reviews-App/js/dbhelper.js',
+    './P7-Restaurant-Reviews-App/data/restaurants.json',
+    './P7-Restaurant-Reviews-App/img/1.jpg',
+    './P7-Restaurant-Reviews-App/img/2.jpg',
+    './P7-Restaurant-Reviews-App/img/3.jpg',
+    './P7-Restaurant-Reviews-App/img/4.jpg',
+    './P7-Restaurant-Reviews-App/img/5.jpg',
+    './P7-Restaurant-Reviews-App/img/6.jpg',
+    './P7-Restaurant-Reviews-App/img/7.jpg',
+    './P7-Restaurant-Reviews-App/img/8.jpg',
+    './P7-Restaurant-Reviews-App/img/9.jpg',
+    './P7-Restaurant-Reviews-App/img/10.jpg'
 ];
 
 self.addEventListener('install', (event) => {
