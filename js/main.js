@@ -10,7 +10,7 @@ var markers = [];
 document.addEventListener('DOMContentLoaded', (event) => {
 
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/P7-Restaurant-Reviews-App/sw.js')
+    navigator.serviceWorker.register('./sw.js')
     .then(function(registration) {
       console.log('ServiceWorker registration successful, scope is: ', registration.scope);
     })

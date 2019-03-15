@@ -10,7 +10,7 @@ class DBHelper {
   static get DATABASE_URL() {
     // const port = 8000; // Change this to your server port
     // return `http://localhost:${port}/data/restaurants.json`;
-    return `https://curiouscc.github.io/P7-Restaurant-Reviews-App/data/restaurants.json`;
+    return `./data/restaurants.json`;
   }
 
   /**
@@ -151,7 +151,7 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/P7-Restaurant-Reviews-App/img/${restaurant.photograph}`);
+    return (`./img/${restaurant.photograph}`);
   }
   /**
    *  Alt text for image.
